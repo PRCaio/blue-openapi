@@ -32,29 +32,19 @@ function handler(request, response) {
               //  totalValue = totalValue + 1}
             //}
             //totalExpenses.push({"transactionName":`${items[i].transactionName}`, "totalAmount": totalValue})
-            //totalValue = 0
+            totalValue = 0
             
            
             }else{ 
                 
-                //for ( ; a < items.length; a++) {
-                    //if (list.includes(items[a].transactionName) == true) {
-                    //totalValue = totalValue + 1
-                //}else{list.push( items[a].transactionName)
-                    //totalExpenses.push({"transactionName": items[a].transactionName, "value": totalValue})
-                //}
-                
-            //}
-            for (let i=0; i<q; i++){
-                for (let j=0; j < n; j++){
-                    if (queries[i] == strings[j]) {
-                        cont++
-                    }
+                for ( ; a < items.length; a++) {
+                    if (list.includes(items[a].transactionName) == true) {
+                    totalValue = totalValue + 1
+            }else{list.push( items[a].transactionName)
+                    totalExpenses.push({"transactionName": items[a].transactionName, "value": totalValue})
                 }
-                results.push(cont);
-                cont = 0;
+                
             }
-            console.log(results)
             
         }
             
