@@ -31,10 +31,10 @@ for ( ; i < items.length; i++) {
         if(current === undefined){
         totalExpenses.push({"organizationName": items[i].organizationName, "amount": items[i].amount})
         }else{
-        if(current.organizationName == 'Instituição Financeira 01'){
+        if(current.organizationName == 'BTG Pactual'){
             current.amount = current.amount + items[i].amount;
         }
-        if(current.organizationName == 'Instituição Financeira 09'){
+        if(current.organizationName == 'Itaú'){
             current.amount = current.amount + items[i].amount;
         }
         }
