@@ -24,38 +24,9 @@ function handler(request, response) {
 
 
     for ( ; i < items.length; i++) {
-<<<<<<< HEAD
-        totalValue = 0
-            //for ( ; a < items.length; a++) {
-                if (totalExpenses.includes(items[i].transactionName) == true) {
-                //if(items[i].transactionName == items[a].transactionName){
-              //  totalValue = totalValue + 1}
-            //}
-            //totalExpenses.push({"transactionName":`${items[i].transactionName}`, "totalAmount": totalValue})
-            totalValue = 0
-            
-           
-            }else{ 
-                
-                for ( ; a < items.length; a++) {
-                    if (list.includes(items[a].transactionName) == true) {
-                    totalValue = totalValue + 1
-            }else{list.push( items[a].transactionName)
-                    totalExpenses.push({"transactionName": items[a].transactionName, "value": totalValue})
-                }
-                
-            }
-            
-        }
-            
-                
-       // }
-    }
-=======
         var current = totalExpenses.find(obj => {
             return obj.transactionName === items[i].transactionName
           });
->>>>>>> 1b1843a4ea5ee2991fef18f338a030b2139f079e
 
           if(current === undefined){
             totalExpenses.push({"transactionName": items[i].transactionName, "amount": items[i].amount})
