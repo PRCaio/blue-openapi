@@ -1,3 +1,4 @@
+import next from "next";
 import account from "./account";
 
 function handler(request, response) {
@@ -20,11 +21,10 @@ function handler(request, response) {
     var i = 0
     var a= 0
     var list = []
-    let n = strings.length;
-    let q = queries.length;
-    let cont = 0;
+
 
     for ( ; i < items.length; i++) {
+<<<<<<< HEAD
         totalValue = 0
             //for ( ; a < items.length; a++) {
                 if (totalExpenses.includes(items[i].transactionName) == true) {
@@ -51,7 +51,21 @@ function handler(request, response) {
                 
        // }
     }
+=======
+        var current = totalExpenses.find(obj => {
+            return obj.transactionName === items[i].transactionName
+          });
+>>>>>>> 1b1843a4ea5ee2991fef18f338a030b2139f079e
 
+          if(current === undefined){
+            totalExpenses.push({"transactionName": items[i].transactionName, "amount": items[i].amount})
+          }else{
+            if(current.transactionName == items[i].transactionName){
+                current.amount = current.amount + items[i].amount;
+            }
+          }
+       
+    }
 
     response.json({
         totalExpenses
