@@ -14,8 +14,10 @@ function handler(request, response) {
         return 0;
       });
 
+      var newItems =  items.reverse()
+
     response.json({
-        items
+       newItems
     } 
     )
   }
